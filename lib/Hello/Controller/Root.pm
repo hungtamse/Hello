@@ -47,6 +47,17 @@ sub default :Path {
     $c->response->status(404);
 }
 
+=head2 hello
+
+hello
+
+=cut
+
+sub hello :Global {
+    my ( $self, $c ) = @_;
+    $c->stash(template => 'hello.tt');
+}
+
 =head2 end
 
 Attempt to render a view, if needed.
